@@ -31,6 +31,12 @@
             color: var(--navy);
         }
 
+        p{
+            font-family: 'Khand';
+            font-size: 20px;
+            color: var(--text);
+        }
+
         /* Nav Styling */
         .leftsection {
             display: flex;
@@ -251,6 +257,73 @@
             }
 
         }
+
+        /* How it started */
+
+        .howitstarted{
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+
+        .hojskolecont{
+            flex-wrap: wrap;
+            flex-direction: row;
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .hojskole{
+            width: 30vw;
+        }
+
+        .hojskolepic{
+            flex-wrap: wrap;
+            flex-direction: column;
+            display: flex;
+            width: 40vw;
+        }
+
+        .img2{
+            align-self: flex-end;
+            align-content: end;
+            justify-content: end;
+            justify-self: end;
+        }
+
+        /* How it is going */
+
+        .howitsgoing{
+            margin-left: 50vw;
+            margin-bottom: -150px;
+            margin-top: 6%;
+        }
+
+        .nowcont{
+            flex-wrap: wrap;
+            flex-direction: row;
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nowpic{
+            flex-wrap: wrap;
+            flex-direction: column;
+            display: flex;
+            width: auto;
+        }
+
+     
+        .potterytext{
+            width: 25vw;
+            margin-left: 20px;
+        }
+
+
     </style>
 </head>
 
@@ -261,7 +334,7 @@
         <div class="leftsection">
             <li class="logo"><img src="img/logo.png" alt="Logo"></li>
             <ul class="nav-links">
-                <li><a href="#">My Storyy</a></li>
+                <li><a href="#">My Story</a></li>
                 <li><a href="#">My Work</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -288,21 +361,57 @@
             <button class="contactme"><a href="#">Contact Me</a></button>
 
         </div>
-
     </div>
 
+    <!-- How It Started -->
 
+    <h1 class="howitstarted">How it started...</h1>
 
+    <div class="hojskolecont">
+    <div class="hojskole">
+        <p class="hojskole">I wasn’t always super enthusiastic about art in general. 
+        However, after my time in Denmark, I discovered a great 
+        passion for creating pottery and ceramics in my free time. 
+        It was after my first pottery class in Højskole, where I 
+        learned the basics and really grew in my craft. I realized 
+        I had a true knack for creating cute dishes and bringing 
+        smiles to those who I gift them to. <br><br>
+        I love making others happy with my creations and I’m excited
+         to to share my artwork as inspiration with the online pottery
+          community whom I’ve taken great inspo from as well.</p>
+    </div>
 
+    <div class="hojskolepic">
+        <img class ="img1" src="img/workshop.png">
+        <img class="img2" src="img/painting.png">
+    </div>
+    </div>
 
+    <!-- How it's going -->
 
+    <h1 class="howitsgoing">How it's going...</h1>
 
+    <div class="nowcont">
+        
+        <div class="nowpic">
+            <img class ="img11" src="img/colors.png">
+            <img class="img22" src="img/ceramincs.png">
+        </div>
 
+        <img class="img33" src="img/car.png">
 
+        <div class="potterytext">
 
-
-
-
+            <p class="potterytext">For me, pottery is a meditative and therapeutic process. 
+                The hands on quality of working with clay really helps me feel connected 
+                to my surroundings and allows me to express myself creatively. <br><br>
+                Transforming a blob of clay into something beautiful and functional 
+                is definitely my favourite part. Every piece I create tells a story, 
+                whether it's about the journey of becoming what it is or the inspiration 
+                behind its creation. The whole process is what I fell in love with and I’m 
+                excited to share my passion with others.</p>
+            </div>
+        </div>
 
 
 
