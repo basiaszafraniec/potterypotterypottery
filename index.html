@@ -37,6 +37,24 @@
             color: var(--text);
         }
 
+        h3{
+            font-family: 'Khand';
+            color: var(--text);
+            font-weight: normal;
+        }
+
+        @media only screen and (max-width: 1000px) {
+        h1{
+            font-size: 36px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+        }
+
+
+
         /* Nav Styling */
         .leftsection {
             display: flex;
@@ -199,7 +217,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     display: flex;
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -208,6 +226,7 @@
 
         .zofia {
             width: 50vw;
+            position: relative;
         }
 
         .text {
@@ -219,10 +238,15 @@
             border: none;
             font-size: 24px;
             font-family: 'Khand';
-            padding: 0 20px;
+            padding: 8px 24px;
             border-radius: 16px;
             background-color: var(--navy);
             margin-top: 50px;
+        }
+
+        .contactme:hover{
+            background-color: var(--peach);
+            transition: 0.3s ease-in-out;
         }
 
         .contactme a {
@@ -248,6 +272,7 @@
                 flex-direction: column;
                 /* flex-wrap: wrap; */
                 width: 100vw;
+                margin-top: 150px;
             }
 
             .zofia,
@@ -293,6 +318,34 @@
             justify-self: end;
         }
 
+        @media only screen and (max-width: 1000px) {
+
+        .howitstarted{
+            text-align: center;
+            margin: 0;
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+
+        .hojskolecont{
+            flex-direction: column;
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+        }
+
+        .hojskole{
+            width: 90vw;
+            display: block;
+            height: auto;
+        }
+
+        .hojskolepic{
+            width: 90vw;
+        }
+
+        }
+
         /* How it is going */
 
         .howitsgoing{
@@ -321,6 +374,34 @@
         .potterytext{
             width: 25vw;
             margin-left: 20px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+
+        .howitsgoing{
+            margin-bottom: 0;
+            margin-left: 0;
+            text-align: center;
+        }
+            
+        .nowcont{
+            flex-direction: column;
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+        }
+
+        .potterytext{
+            width: 90vw;
+            display: block;
+            height: auto;
+            margin-left: 0;
+        }
+
+        /* .nowpic{
+            width: 90vw;
+        } */
+
         }
 
 
@@ -355,10 +436,10 @@
             <h1>Hi. Hello.</h1>
             <h1>I am Zofia Bekisz</h1>
             <br>
-            <h3 class="short">Welcome to my pottery portfolio! Feel free to browse through my artwork, and don't
-                hesitate to reach out if you'd like to connect :&#41</h3>
+            <p class="short">Welcome to my pottery portfolio! Feel free to browse through my artwork, and don't
+                hesitate to reach out if you'd like to connect :&#41</p>
 
-            <button class="contactme"><a href="#">Contact Me</a></button>
+            <button class="contactme"><a href="#">Let's connect!</a></button>
 
         </div>
     </div>
