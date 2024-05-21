@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zofia Bekisz Portfolio</title>
     <link href='https://fonts.googleapis.com/css?family=Khand' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -453,6 +454,56 @@
             width: 25vw;
 
         }
+
+        @media (max-width: 760px) {
+            body, html {
+                height: auto;
+            }
+
+            .wrapper {
+                height: auto;
+                padding: 20px;
+            }
+
+            .notebook {
+                position: static;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .notebook img {
+                display: none;
+            }
+
+            .rabbittext {
+                position: static;
+                transform: none;
+                padding: 0;
+                box-sizing: border-box;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        /* Lets Connect */
+        .letsconnect{
+            text-align: center;
+        }
+
+
+
+
+
+        /* Footer */
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--peach);
+            bottom: 0;
+        }
+
     </style>
 </head>
 
@@ -601,6 +652,28 @@
         <img class="rabbitsketch" src="img/emptyvase2.png" alt="Empty Vase">
 
     </div>
+
+    <!-- Let's Connect! -->
+
+    <div class="letsconnect">
+    <h1>Let's Connect!</h1>
+    <br>
+    <h3>zofia.bekisz@gmail.com</h3>
+    <br>
+    <p>or</p>
+
+    <i class="fa-brands fa-tiktok"></i>
+    <i class="fa-brands fa-square-instagram"></i>
+    <i class="fa-brands fa-square-facebook"></i>
+
+    </div>    
+    <!-- Footer -->
+
+    <div class="footer">
+        <p>Zofia Bekisz &copy; 2024</p>
+    </div>
+
+
 
     <script>
         //magda's 
