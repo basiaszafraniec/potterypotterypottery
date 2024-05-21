@@ -7,19 +7,6 @@
     <title>Zofia Bekisz Portfolio</title>
     <link href='https://fonts.googleapis.com/css?family=Khand' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Zeyada&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Ms+Madi&family=Shadows+Into+Light&family=Zeyada&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Ms+Madi&family=Shadows+Into+Light&family=Zeyada&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -424,6 +411,20 @@
 
         }
 
+        /* Shelf */
+
+        .shelf_div {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("img/oldpaper.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
         /* Rabbit Pot */
         .wrapper {
             display: flex;
@@ -470,7 +471,9 @@
         }
 
         @media (max-width: 760px) {
-            body, html {
+
+            body,
+            html {
                 height: auto;
             }
 
@@ -500,7 +503,7 @@
         }
 
         /* Lets Connect */
-        .letsconnect{
+        .letsconnect {
             text-align: center;
         }
 
@@ -527,7 +530,6 @@
             bottom: 0;
             margin-top: 100px;
         }
-
     </style>
 </head>
 
@@ -618,6 +620,19 @@
         </div>
     </div>
 
+    <!-- Shelf -->
+
+    <div class="shelf_div">
+        <h1 class="howitstarted">My Work</h1>
+        <div class="top_shelf">
+            <img src="img/shelf.png" alt="drawing of a shelf" class="shelf">
+        </div>
+        <div class="bottom_shelf">
+            <img src="img/shelf.png" alt="drawing of a shelf" class="shelf">
+        </div>
+
+    </div>
+
     <!-- Rabbit Pot -->
 
     <h1 class="howitstarted">Rabbit Pot</h1>
@@ -680,19 +695,17 @@
     <!-- Let's Connect! -->
 
     <div class="letsconnect">
-    <h1>Let's Connect!</h1>
-    <br>
-    <h3>zofia.bekisz@gmail.com</h3>
-    <br>
-    <p>or</p>
+        <h1>Let's Connect!</h1>
+        <br>
+        <h3>zofia.bekisz@gmail.com</h3>
+        <br>
+        <p>or</p>
 
-    <div class="some">
     <i class="fa-brands fa-tiktok"></i>
     <i class="fa-brands fa-square-instagram"></i>
     <i class="fa-brands fa-square-facebook"></i>
-    </div>
 
-    </div>    
+    </div>
     <!-- Footer -->
 
     <div class="footer">
