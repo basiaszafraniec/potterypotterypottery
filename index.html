@@ -415,7 +415,7 @@
         /* Shelf */
 
         .shelf_div {
-            height: 100vh;
+            min-height: 100vh;
             width: 100vw;
             background-image: url("img/oldpaper.png");
             background-size: cover;
@@ -423,7 +423,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-around;
+        }
+
+        .shelf {
+            width: 90vw;
+        }
+
+        .pots_on_shelf_div{
+            display: flex;
+            /* position: relative; */
+            align-items: baseline;
             justify-content: center;
+            top: 5vh;
+        }
+        .pot_on_shelf {
+            max-width: 20vw;
+            height: auto;
         }
 
         /* Rabbit Pot */
@@ -616,9 +632,21 @@
     <div class="shelf_div">
         <h1 class="howitstarted">My Work</h1>
         <div class="top_shelf">
+            <div class="pots_on_shelf_div">
+                <img src="img/shelf/1.png" alt="pot" class="pot_on_shelf">
+                <img src="img/shelf/2.png" alt="pot" class="pot_on_shelf">
+                <img src="img/shelf/3.png" alt="pot" class="pot_on_shelf">
+                <img src="img/shelf/4.png" alt="pot" class="pot_on_shelf">
+            </div>
             <img src="img/shelf.png" alt="drawing of a shelf" class="shelf">
         </div>
         <div class="bottom_shelf">
+            <div class="pots_on_shelf_div">
+                <img src="img/shelf/5.png" alt="pot" class="pot_on_shelf">
+                <img src="img/shelf/6.png" alt="pot" class="pot_on_shelf">
+                <img src="img/shelf/7.png" alt="pot" class="pot_on_shelf">
+                <img src="img/shelf/8.png" alt="pot" class="pot_on_shelf">
+            </div>
             <img src="img/shelf.png" alt="drawing of a shelf" class="shelf">
         </div>
 
