@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zofia Bekisz Portfolio</title>
     <link href='https://fonts.googleapis.com/css?family=Khand' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Ms+Madi&family=Shadows+Into+Light&family=Zeyada&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -27,11 +28,15 @@
             display: flex;
             flex-direction: column;
             background-color: var(--beige);
+            background-image: url(img/backs2.png);
+            background-repeat: repeat;
+            background-size: cover;
         }
 
         h1 {
             font-size: 76px;
             color: var(--navy);
+            font-family: 'Ms Madi';
         }
 
         p {
@@ -54,7 +59,13 @@
             p {
                 font-size: 18px;
             }
+
+            body{
+                background-image: none;
+            }
         }
+
+
 
 
 
@@ -525,7 +536,16 @@
         }
 
 
+        .fa-brands{
+            font-size: 64px;
+            color: var(--navy);
+            padding: 10px;
+        }
 
+        .fa-brands:hover{
+            color: var(--peach);
+            cursor: pointer;
+        }
 
 
         /* Footer */
@@ -536,6 +556,7 @@
             padding: 40px 0;
             background-color: var(--peach);
             bottom: 0;
+            margin-top: 100px;
         }
     </style>
 </head>
@@ -720,9 +741,9 @@
         <br>
         <p>or</p>
 
-        <i class="fa-brands fa-tiktok"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-        <i class="fa-brands fa-square-facebook"></i>
+    <i class="fa-brands fa-tiktok"></i>
+    <i class="fa-brands fa-square-instagram"></i>
+    <i class="fa-brands fa-square-facebook"></i>
 
     </div>
     <!-- Footer -->
