@@ -23,6 +23,7 @@
         :root {
             --beige: #E4E4DC;
             --peach: #D3AD90;
+            --lightpeach: #dccbbf;
             --navy: #024968;
             --text: #1B1719;
         }
@@ -565,7 +566,7 @@
         textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid --beige;
             border-radius: 4px;
             box-sizing: border-box;
             margin-top: 6px;
@@ -575,7 +576,7 @@
 
         .container {
             border-radius: 5px;
-            background-color: #f2f2f2;
+            background-color: var(--lightpeach);
             padding: 5vw;
             margin: 5vw;
         }
@@ -774,7 +775,7 @@
         <h1>Let's Connect!</h1>
         <br>
         <div class="container">
-            <form action="/action_page.php">
+            <form action="#">
                 <label for="fname">Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -835,42 +836,6 @@
 
 
     </script>
-
-    <!-- 
-    <section class="first_page"></section>
-    <section class="my_story"></section>
-    <section class="my_works"></section>
-    <section class="contact"></section>
-    <div class="basias_lil_test">
-        <img class="img1" src="mug_left.png" alt="ink drawing of a hand holding a mug" id="mug_left">
-        <img class="img1" src="mug_right.png" alt="ink drawing of a hand holding a mug" id="mug_right">
-
-        <script>
-            const cup = document.querySelector(".img1");
-
-            const options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5
-            };
-
-            // Create a new Intersection Observer
-            const observer = new IntersectionObserver(function (entries, observer) {
-                entries.forEach(entry => {
-                    // If element is in viewport, add the 'show' class to trigger the animation
-                    if (entry.isIntersecting) {
-                        cup.classList.add('active');
-                    } else {
-                        cup.classList.remove('active');
-                    }
-                });
-            }, options);
-
-            // Start observing the element
-            observer.observe(cup);
-        </script>
-    </div> -->
-
 </body>
 
 </html>
