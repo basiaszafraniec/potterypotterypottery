@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Ms+Madi&family=Shadows+Into+Light&family=Zeyada&display=swap"
         rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -26,6 +27,7 @@
             --lightpeach: #dccbbf;
             --navy: #024968;
             --text: #1B1719;
+            --textfaded: #888485;
         }
 
         body {
@@ -96,7 +98,7 @@
             font-family: 'Source Sans Pro';
         }
 
-        ul a:hover{
+        ul a:hover {
             text-decoration: underline;
             transition: .3s ease-in-out;
         }
@@ -564,29 +566,6 @@
             cursor: pointer;
         }
 
-        /* Contact Form */
-
-        input[type=text],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid --beige;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-
-        .container {
-            border-radius: 5px;
-            background-color: var(--lightpeach);
-            padding: 5vw;
-            margin: 5vw;
-        }
-
-
         /* Footer */
 
         .footer {
@@ -596,6 +575,252 @@
             background-color: var(--peach);
             bottom: 0;
             margin-top: 100px;
+        }
+
+        /* Contact Form */
+        body .form-container {
+            width: 600px;
+            max-width: 90%;
+            box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            overflow: hidden;
+            background: var(--lightpeach);
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            margin-left: auto;
+            margin-right: auto;
+            /* border: 2px solid ; */
+        }
+
+        body .form-container .ion-android-done {
+            color: var(--text);
+            font-size: 60px;
+            align-self: center;
+        }
+
+        body .form-container.transitioned-3 {
+            animation: swoosh 1s 1;
+        }
+
+        body .form-container .belt {
+            width: 300%;
+            display: flex;
+            transition: transform 300ms ease-in-out;
+        }
+
+        body .form-container .belt.transitioned-1 {
+            transform: translateX(-33%);
+        }
+
+        body .form-container .belt.transitioned-2 {
+            transform: translateX(-66%);
+        }
+
+        body .form-container .progress-wrapper,
+        body .form-container .success-wrapper,
+        body .form-container .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        body .form-container .progress-wrapper .form-header,
+        body .form-container .success-wrapper .form-header,
+        body .form-container .form .form-header {
+            width: 100%;
+            margin: 0 0 20px;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        body .form-container .progress-wrapper .form-header h2,
+        body .form-container .success-wrapper .form-header h2,
+        body .form-container .form .form-header h2 {
+            color: var(--text);
+        }
+
+        body .form-container .progress-wrapper input,
+        body .form-container .progress-wrapper textarea,
+        body .form-container .success-wrapper input,
+        body .form-container .success-wrapper textarea,
+        body .form-container .form input,
+        body .form-container .form textarea {
+            display: block;
+            width: 95%;
+            max-width: 93%;
+            margin: 10px 0;
+            padding: 10px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid --text;
+            background: var(--beige);
+            color: var(--text);
+            caret-color: var(--text);
+            border-radius: 5px;
+        }
+
+        body .form-container .progress-wrapper input::placeholder,
+        body .form-container .progress-wrapper textarea::placeholder,
+        body .form-container .success-wrapper input::placeholder,
+        body .form-container .success-wrapper textarea::placeholder,
+        body .form-container .form input::placeholder,
+        body .form-container .form textarea::placeholder {
+            color: var(--textfaded);
+            transition: color 0.2s;
+            font-size: 14px;
+        }
+
+        body .form-container .progress-wrapper input:focus::placeholder,
+        body .form-container .progress-wrapper textarea:focus::placeholder,
+        body .form-container .success-wrapper input:focus::placeholder,
+        body .form-container .success-wrapper textarea:focus::placeholder,
+        body .form-container .form input:focus::placeholder,
+        body .form-container .form textarea:focus::placeholder {
+            color: transparent;
+        }
+
+        body .form-container .progress-wrapper button,
+        body .form-container .success-wrapper button,
+        body .form-container .form button {
+            background: var(--navy);
+            border: none;
+            color: var(--beige);
+            padding: 12px;
+            border-radius: 5px;
+            align-self: flex-end;
+            margin: 10px 10px 10px 0;
+            box-shadow: 0px 10px 13px -12px rgba(0, 0, 0, 0.3);
+            outline: none;
+            transition: all 300ms ease-in-out;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        body .form-container .progress-wrapper h2,
+        body .form-container .success-wrapper h2,
+        body .form-container .form h2 {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        body .form-container .progress-div {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        body .form-container .progress-div h3 {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        body .form-container .progress-div .progress-outer {
+            width: 150px;
+            height: 20px;
+            background: #fff;
+            padding: 5px;
+            box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+
+        body .form-container .progress-div .progress-outer .progress-inner {
+            background-color: var(--navy);
+            border-radius: 5px;
+            height: 20px;
+            width: 0%;
+        }
+
+        body .form-container .progress-div .progress-outer .progress-inner.loading {
+            animation: loading 3s 1 300ms forwards;
+        }
+
+        body .form-container .success {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+        }
+
+        body .form-container .success h2 {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        body .form-container .success button {
+            align-self: center;
+            font-size: 14px;
+        }
+
+        body button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 10px 23px -17px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes swoosh {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            10% {
+                transform: translateY(10px);
+                opacity: 1;
+            }
+
+            50%,
+            70% {
+                transform: translateY(-150%);
+                opacity: 0;
+            }
+
+            80% {
+                transform: translateY(-50%);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes loading {
+
+            0%,
+            30% {
+                width: 0%;
+            }
+
+            30% {
+                width: 10%;
+            }
+
+            40% {
+                width: 40%;
+            }
+
+            50% {
+                width: 50%;
+            }
+
+            60%,
+            70% {
+                width: 70%;
+            }
+
+            100% {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -775,26 +1000,38 @@
 
     <!-- Let's Connect! -->
 
+
     <div id="Contact"></div>
     <div class="letsconnect">
         <h1>Let's Connect!</h1>
         <br>
-        <div class="container">
-            <form action="#">
-                <label for="fname">Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject..">
-
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Ask me anything!" style="height:200px"></textarea>
-
-                <input type="submit" value="Submit" class="contactme">
-            </form>
+        <div class="form-container">
+            <div class="belt">
+                <div class="form">
+                    <div class="form-header">
+                        <h2>Send me a message!</h2>
+                    </div>
+                    <input type="email" placeholder="Email" />
+                    <textarea name="" id="" cols="50" rows="10" placeholder="Ask me anything :&#41"></textarea>
+                    <button>Send</button>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress-div">
+                        <h3>Your message is sending...</h3>
+                        <div class="progress-outer">
+                            <div class="progress-inner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="success-wrapper">
+                    <div class="success">
+                        <i class="ion-android-done"></i>
+                        <h2>Your Message Has Been Sent!</h2>
+                        <button>Back</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <h3>zofia.bekisz@gmail.com</h3>
         <br>
         <p>or</p>
@@ -813,8 +1050,6 @@
 
 
     <script>
-        //magda's 
-
         // Navigation
         document.addEventListener("DOMContentLoaded", function () {
             const burger = document.querySelector(".burger");
@@ -837,6 +1072,34 @@
         window.addEventListener('scroll', function () {
             var nav = document.querySelector('nav');
             nav.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        //Script for form
+
+        $(".form button").on("click", function () {
+            $(".belt").addClass("transitioned-1");
+            $(".progress-inner").addClass("loading");
+
+            setTimeout(function () {
+                $(".form-container").addClass("transitioned-3");
+            }, 3000);
+
+            setTimeout(function () {
+                $(".belt").removeClass("transitioned-1");
+                $(".belt").addClass("transitioned-2");
+            }, 3300);
+
+            $(".success button").on("click", function () {
+                $(".progress-inner").removeClass("loading");
+                $(".belt").removeClass("transitioned-2");
+                $(".form-container").removeClass("transitioned-3");
+            });
+
+            // setTimeout(function(){
+            //   $('.form-container').addClass('transitioned-3');
+            // },6000);
+            // $('.belt').removeClass('transitioned-2');
+            // $('.form-container').removeClass('transitioned-3');
         });
 
 
