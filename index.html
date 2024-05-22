@@ -19,6 +19,8 @@
         * {
             margin: 0;
             padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
         }
 
         :root {
@@ -47,13 +49,13 @@
         }
 
         p {
-            font-family: 'Source Sans Pro';
+            /* font-family: 'Source Sans Pro'; */
             font-size: 1em;
             color: var(--text);
         }
 
         h3 {
-            font-family: 'Source Sans Pro';
+            /* font-family: 'Source Sans Pro'; */
             color: var(--text);
             font-weight: normal;
         }
@@ -95,7 +97,7 @@
             text-decoration: none;
             font-size: 20px;
             color: var(--text);
-            font-family: 'Source Sans Pro';
+            /* font-family: 'Source Sans Pro'; */
         }
 
         ul a:hover {
@@ -865,7 +867,8 @@
     <!-- How It Started -->
 
     <div id="MyStory"></div>
-    <h1 class="howitstarted">How it started...</h1>
+    <h1 class="howitstarted">My Story</h1>
+    <h2 class="howitstarted">How it started...</h2>
 
     <div class="hojskolecont">
         <div class="hojskole">
@@ -889,7 +892,7 @@
 
     <!-- How it's going -->
 
-    <h1 class="howitsgoing">How it's going...</h1>
+    <h2 class="howitsgoing">How it's going...</h2>
 
     <div class="nowcont">
 
@@ -1004,6 +1007,7 @@
     <div id="Contact"></div>
     <div class="letsconnect">
         <h1>Let's Connect!</h1>
+        <p>Open to collaborations :&#41</p>
         <br>
         <div class="form-container">
             <div class="belt">
@@ -1026,7 +1030,7 @@
                 <div class="success-wrapper">
                     <div class="success">
                         <i class="ion-android-done"></i>
-                        <h2>Your Message Has Been Sent!</h2>
+                        <h2>Thank you for your message!</h2>
                         <button>Back</button>
                     </div>
                 </div>
@@ -1034,8 +1038,6 @@
         </div>
         <h3>zofia.bekisz@gmail.com</h3>
         <br>
-        <p>or</p>
-
         <i class="fa-brands fa-tiktok"></i>
         <i class="fa-brands fa-square-instagram"></i>
         <i class="fa-brands fa-square-facebook"></i>
@@ -1095,11 +1097,11 @@
                 $(".form-container").removeClass("transitioned-3");
             });
 
-            // setTimeout(function(){
-            //   $('.form-container').addClass('transitioned-3');
-            // },6000);
-            // $('.belt').removeClass('transitioned-2');
-            // $('.form-container').removeClass('transitioned-3');
+            setTimeout(function () {
+                $('.form-container').addClass('transitioned-3');
+            }, 6000);
+            $('.belt').removeClass('transitioned-2');
+            $('.form-container').removeClass('transitioned-3');
         });
 
 
