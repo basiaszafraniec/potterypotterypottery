@@ -260,6 +260,7 @@
             border-radius: 16px;
             background-color: var(--navy);
             margin-top: 50px;
+            color: white;
         }
 
         .contactme:hover {
@@ -446,6 +447,7 @@
             position: relative;
             top: -5vh;
         }
+
         .bottom_shelf {
             margin-bottom: 20vh;
         }
@@ -556,6 +558,28 @@
             cursor: pointer;
         }
 
+        /* Contact Form */
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 5vw;
+            margin: 5vw;
+        }
+
 
         /* Footer */
 
@@ -577,9 +601,9 @@
         <div class="leftsection">
             <li class="logo"><img src="img/logo.png" alt="Logo"></li>
             <ul class="nav-links">
-                <li><a href="#">My Story</a></li>
-                <li><a href="#">My Work</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#MyStory">My Story</a></li>
+                <li><a href="#MyWork">My Work</a></li>
+                <li><a href="#Contact">Contact</a></li>
                 <li><a href="http://zofiakubisz.magdalenapietras.dk/shop" target="_blank">Shop</a></li>
             </ul>
         </div>
@@ -609,6 +633,7 @@
 
     <!-- How It Started -->
 
+    <div id="MyStory"></div>
     <h1 class="howitstarted">How it started...</h1>
 
     <div class="hojskolecont">
@@ -659,6 +684,7 @@
 
     <!-- Shelf -->
 
+    <div id="MyWork"></div>
     <div class="shelf_div">
         <h1 class="howitstarted">My Work</h1>
         <div class="top_shelf">
@@ -743,9 +769,26 @@
 
     <!-- Let's Connect! -->
 
+    <div id="Contact"></div>
     <div class="letsconnect">
         <h1>Let's Connect!</h1>
         <br>
+        <div class="container">
+            <form action="/action_page.php">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject..">
+
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Ask me anything!" style="height:200px"></textarea>
+
+                <input type="submit" value="Submit" class="contactme">
+            </form>
+        </div>
+
         <h3>zofia.bekisz@gmail.com</h3>
         <br>
         <p>or</p>
