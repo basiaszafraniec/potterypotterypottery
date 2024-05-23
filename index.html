@@ -19,7 +19,7 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            /* font-family: Arial, Helvetica, sans-serif; */
 
         }
 
@@ -49,13 +49,13 @@
         }
 
         p {
-            /* font-family: 'Source Sans Pro'; */
+            font-family: 'Source Sans Pro';
             font-size: 1em;
             color: var(--text);
         }
 
         h3 {
-            /* font-family: 'Source Sans Pro'; */
+            font-family: 'Source Sans Pro';
             color: var(--text);
             font-weight: normal;
         }
@@ -97,7 +97,7 @@
             text-decoration: none;
             font-size: 20px;
             color: var(--text);
-            /* font-family: 'Source Sans Pro'; */
+            font-family: 'Source Sans Pro';
         }
 
         ul a:hover {
@@ -471,7 +471,13 @@
         .pot_on_shelf {
             max-width: 20vw;
             height: auto;
+            position: relative;
             z-index: 10;
+        }
+
+        .pot_on_shelf:hover {
+            transform: rotate(15deg);
+            z-index: 100;
         }
 
         /* Rabbit Pot */
@@ -832,7 +838,9 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="leftsection">
-            <li class="logo"><img src="img/logo.png" alt="Logo"></li>
+            <a href="#">
+                <li class="logo"><img src="img/logo.png" alt="Logo"></li>
+            </a>
             <ul class="nav-links">
                 <li><a href="#MyStory">My Story</a></li>
                 <li><a href="#MyWork">My Work</a></li>
@@ -859,7 +867,7 @@
             <p class="short">Welcome to my pottery portfolio! Feel free to browse through my artwork, and don't
                 hesitate to reach out if you'd like to connect :&#41</p>
 
-            <button class="contactme"><a href="#">Let's connect!</a></button>
+            <button class="contactme"><a href="#Contact">Let's connect!</a></button>
 
         </div>
     </div>
@@ -924,9 +932,17 @@
         <div class="top_shelf">
             <div class="pots_on_shelf_div">
                 <img src="img/shelf/1.png" alt="pot" class="pot_on_shelf">
-                <img src="img/shelf/2.png" alt="pot" class="pot_on_shelf">
-                <img src="img/shelf/3.png" alt="pot" class="pot_on_shelf">
-                <img src="img/shelf/4.png" alt="pot" class="pot_on_shelf">
+                <a href="#rabbit">
+                    <img src="img/shelf/2.png" alt="pot" class="pot_on_shelf">
+                </a>
+                <a href="#pitcher">
+                    <img src="img/shelf/3.png" alt="pot" class="pot_on_shelf">
+                </a>
+                <a href="#vase">
+                    <img src="img/shelf/4.png" alt="pot" class="pot_on_shelf">
+                </a>
+
+
             </div>
             <img src="img/shelf5.png" alt="drawing of a shelf" class="shelf">
         </div>
@@ -943,6 +959,7 @@
     </div>
 
     <!-- Rabbit Pot -->
+    <div id="rabbit"></div>
 
     <h1 class="howitstarted">Rabbit Pot</h1>
 
@@ -963,6 +980,8 @@
     </div>
 
     <!-- Pitcher -->
+    <div id="pitcher"></div>
+
 
     <h1 class="pitcher">Pitcher</h1>
 
@@ -983,6 +1002,8 @@
 
     <!-- Empty Vase -->
 
+    <div id="vase"></div>
+
     <h1 class="howitstarted">Empty Vase</h1>
 
     <div class="wrapper">
@@ -998,13 +1019,13 @@
         </div>
 
         <img class="rabbitsketch" src="img/emptyvase2.png" alt="Empty Vase">
-
+        <div id="Contact"></div>
     </div>
 
     <!-- Let's Connect! -->
 
 
-    <div id="Contact"></div>
+
     <div class="letsconnect">
         <h1>Let's Connect!</h1>
         <p>Open to collaborations :&#41</p>
